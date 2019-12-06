@@ -2,6 +2,7 @@ package com.buji.anurag.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getUname=et.getText().toString();
                 getPassword=et2.getText().toString();
-                Toast.makeText(getApplicationContext(),getUname + " "+ getPassword,Toast.LENGTH_LONG).show();
+                Log.d("user",getUname);
+                Log.d("pass",getPassword);
+                if(getUname.equals("anurag")&getPassword.equals("1234"))
+                {
+                    Toast.makeText(getApplicationContext(),"succesful ",Toast.LENGTH_LONG).show();
+                }
+
 
             }
         });
