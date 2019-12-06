@@ -1,6 +1,8 @@
 package com.buji.anurag.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText et,et2;
-    Button btn;
+    Button btn,btn2;
     String getUname,getPassword;
 
     @Override
@@ -20,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
         et=(EditText)findViewById(R.id.ed);
         et2=(EditText)findViewById((R.id.ed2));
         btn=(Button)findViewById((R.id.bt));
+        btn2=(Button)findViewById(R.id.regbt);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),Register.class);
+                startActivity(intent);
+
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
